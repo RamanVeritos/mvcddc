@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SampleDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Rolemaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rollname" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbusr">
+    <Key>
+      <PropertyRef Name="usrcod" />
+    </Key>
+    <Property Name="usrcod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usrnam" Type="varchar" MaxLength="100" />
+    <Property Name="usrunm" Type="varchar" MaxLength="100" />
+    <Property Name="usrpwd" Type="varchar" MaxLength="100" />
+    <Property Name="usreml" Type="varchar" MaxLength="50" />
+    <Property Name="usrmob" Type="int" />
+    <Property Name="usrrol" Type="varchar" MaxLength="20" />
+    <Property Name="usrcdt" Type="datetime" />
+    <Property Name="usrisdel" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="UserRoleMapping">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="Roleid" Type="int" />
+  </EntityType>
+  <Association Name="FK_UserRoleMapping_Rolemaster">
+    <End Role="Rolemaster" Type="Self.Rolemaster" Multiplicity="0..1" />
+    <End Role="UserRoleMapping" Type="Self.UserRoleMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rolemaster">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UserRoleMapping">
+        <PropertyRef Name="Roleid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SampleDbModelStoreContainer">
+    <EntitySet Name="Rolemaster" EntityType="Self.Rolemaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbusr" EntityType="Self.tbusr" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRoleMapping" EntityType="Self.UserRoleMapping" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_UserRoleMapping_Rolemaster" Association="Self.FK_UserRoleMapping_Rolemaster">
+      <End Role="Rolemaster" EntitySet="Rolemaster" />
+      <End Role="UserRoleMapping" EntitySet="UserRoleMapping" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

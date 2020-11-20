@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SampleDbModelStoreContainer" CdmEntityContainer="SampleDbEntities">
+    <EntitySetMapping Name="tbusrs">
+      <EntityTypeMapping TypeName="SampleDbModel.tbusr">
+        <MappingFragment StoreEntitySet="tbusr">
+          <ScalarProperty Name="usrcod" ColumnName="usrcod" />
+          <ScalarProperty Name="usrnam" ColumnName="usrnam" />
+          <ScalarProperty Name="usrunm" ColumnName="usrunm" />
+          <ScalarProperty Name="usrpwd" ColumnName="usrpwd" />
+          <ScalarProperty Name="usreml" ColumnName="usreml" />
+          <ScalarProperty Name="usrmob" ColumnName="usrmob" />
+          <ScalarProperty Name="usrrol" ColumnName="usrrol" />
+          <ScalarProperty Name="usrcdt" ColumnName="usrcdt" />
+          <ScalarProperty Name="usrisdel" ColumnName="usrisdel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rolemasters">
+      <EntityTypeMapping TypeName="SampleDbModel.Rolemaster">
+        <MappingFragment StoreEntitySet="Rolemaster">
+          <ScalarProperty Name="rollname" ColumnName="rollname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoleMappings">
+      <EntityTypeMapping TypeName="SampleDbModel.UserRoleMapping">
+        <MappingFragment StoreEntitySet="UserRoleMapping">
+          <ScalarProperty Name="Roleid" ColumnName="Roleid" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

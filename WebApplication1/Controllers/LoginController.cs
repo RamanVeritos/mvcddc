@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Security;
+using WebApplication1.Models;
+
+namespace WebApplication1.Controllers
+{
+    public class LoginController : Controller
+    {
+        // GET: Login
+        public ActionResult Login()
+        {
+           
+            return View();
+        }
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login","login");
+        }
+        [HttpPost]
+        public ActionResult Login(tbusr model)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var context = new SampleDbEntities())
+                {
+                    bool IsValidUser = context.tbusrs.Any(user => user.usrnam.ToLower() ==
+                         model.usrnam.ToLower() && user.usrpwd == model.usrpwd);
+                    if (IsValidUser)
+                    {
+                        FormsAuthentication.SetAuthCookie(model.usrnam, false);
+                        return RedirectToAction("Index", "Main");
+                       
+                    }
+                    ModelState.AddModelError("", "invalid Username or Password");
+                    return View();
+                }
+            }
+            else
+            {
+                return View(model);
+            }
+           
+        }
+
+    }
+}

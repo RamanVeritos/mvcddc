@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SampleDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Rolemaster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rollname" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbusr">
+          <Key>
+            <PropertyRef Name="usrcod" />
+          </Key>
+          <Property Name="usrcod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="usrnam" Type="varchar" MaxLength="100" />
+          <Property Name="usrunm" Type="varchar" MaxLength="100" />
+          <Property Name="usrpwd" Type="varchar" MaxLength="100" />
+          <Property Name="usreml" Type="varchar" MaxLength="50" />
+          <Property Name="usrmob" Type="int" />
+          <Property Name="usrrol" Type="varchar" MaxLength="20" />
+          <Property Name="usrcdt" Type="datetime" />
+          <Property Name="usrisdel" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="UserRoleMapping">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Userid" Type="int" />
+          <Property Name="Roleid" Type="int" />
+        </EntityType>
+        <Association Name="FK_UserRoleMapping_Rolemaster">
+          <End Role="Rolemaster" Type="Self.Rolemaster" Multiplicity="0..1" />
+          <End Role="UserRoleMapping" Type="Self.UserRoleMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rolemaster">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UserRoleMapping">
+              <PropertyRef Name="Roleid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SampleDbModelStoreContainer">
+          <EntitySet Name="Rolemaster" EntityType="Self.Rolemaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbusr" EntityType="Self.tbusr" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRoleMapping" EntityType="Self.UserRoleMapping" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_UserRoleMapping_Rolemaster" Association="Self.FK_UserRoleMapping_Rolemaster">
+            <End Role="Rolemaster" EntitySet="Rolemaster" />
+            <End Role="UserRoleMapping" EntitySet="UserRoleMapping" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SampleDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbusr">
+          <Key>
+            <PropertyRef Name="usrcod" />
+          </Key>
+          <Property Name="usrcod" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usrnam" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="usrunm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="usrpwd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="usreml" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="usrmob" Type="Int32" />
+          <Property Name="usrrol" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="usrcdt" Type="DateTime" Precision="3" />
+          <Property Name="usrisdel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="SampleDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbusrs" EntityType="Self.tbusr" />
+          <EntitySet Name="Rolemasters" EntityType="SampleDbModel.Rolemaster" />
+          <EntitySet Name="UserRoleMappings" EntityType="SampleDbModel.UserRoleMapping" />
+          <AssociationSet Name="FK_UserRoleMapping_Rolemaster" Association="SampleDbModel.FK_UserRoleMapping_Rolemaster">
+            <End Role="Rolemaster" EntitySet="Rolemasters" />
+            <End Role="UserRoleMapping" EntitySet="UserRoleMappings" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Rolemaster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rollname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UserRoleMappings" Relationship="SampleDbModel.FK_UserRoleMapping_Rolemaster" FromRole="Rolemaster" ToRole="UserRoleMapping" />
+        </EntityType>
+        <EntityType Name="UserRoleMapping">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Userid" Type="Int32" />
+          <Property Name="Roleid" Type="Int32" />
+          <NavigationProperty Name="Rolemaster" Relationship="SampleDbModel.FK_UserRoleMapping_Rolemaster" FromRole="UserRoleMapping" ToRole="Rolemaster" />
+        </EntityType>
+        <Association Name="FK_UserRoleMapping_Rolemaster">
+          <End Type="SampleDbModel.Rolemaster" Role="Rolemaster" Multiplicity="0..1" />
+          <End Type="SampleDbModel.UserRoleMapping" Role="UserRoleMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rolemaster">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UserRoleMapping">
+              <PropertyRef Name="Roleid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SampleDbModelStoreContainer" CdmEntityContainer="SampleDbEntities">
+          <EntitySetMapping Name="tbusrs">
+            <EntityTypeMapping TypeName="SampleDbModel.tbusr">
+              <MappingFragment StoreEntitySet="tbusr">
+                <ScalarProperty Name="usrcod" ColumnName="usrcod" />
+                <ScalarProperty Name="usrnam" ColumnName="usrnam" />
+                <ScalarProperty Name="usrunm" ColumnName="usrunm" />
+                <ScalarProperty Name="usrpwd" ColumnName="usrpwd" />
+                <ScalarProperty Name="usreml" ColumnName="usreml" />
+                <ScalarProperty Name="usrmob" ColumnName="usrmob" />
+                <ScalarProperty Name="usrrol" ColumnName="usrrol" />
+                <ScalarProperty Name="usrcdt" ColumnName="usrcdt" />
+                <ScalarProperty Name="usrisdel" ColumnName="usrisdel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rolemasters">
+            <EntityTypeMapping TypeName="SampleDbModel.Rolemaster">
+              <MappingFragment StoreEntitySet="Rolemaster">
+                <ScalarProperty Name="rollname" ColumnName="rollname" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoleMappings">
+            <EntityTypeMapping TypeName="SampleDbModel.UserRoleMapping">
+              <MappingFragment StoreEntitySet="UserRoleMapping">
+                <ScalarProperty Name="Roleid" ColumnName="Roleid" />
+                <ScalarProperty Name="Userid" ColumnName="Userid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

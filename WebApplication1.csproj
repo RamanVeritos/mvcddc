@@ -149,6 +149,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Model1ddc.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1ddc.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1ddc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1ddc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1ddc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1ddc.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\myviewmodel.cs" />
     <Compile Include="Models\Rolemaster.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -644,6 +660,16 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\Model1ddc.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1ddc.edmx</DependentUpon>
+      <LastGenOutput>Model1ddc.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1ddc.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1ddc.edmx</DependentUpon>
+      <LastGenOutput>Model1ddc.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="assets\chart-master\.gitignore" />
@@ -705,6 +731,13 @@
     </EntityDeploy>
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Model1ddc.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1ddc.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1ddc.edmx.diagram">
+      <DependentUpon>Model1ddc.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

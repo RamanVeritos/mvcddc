@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="SampleDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="ddc_login2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="tbusr">
     <Key>
       <PropertyRef Name="usrcod" />
@@ -14,11 +14,11 @@
     <Property Name="usrcdt" Type="DateTime" Precision="3" />
     <Property Name="usrisdel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
   </EntityType>
-  <EntityContainer Name="SampleDbEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="ddc_login2Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tbusrs" EntityType="Self.tbusr" />
-    <EntitySet Name="Rolemasters" EntityType="SampleDbModel.Rolemaster" />
-    <EntitySet Name="UserRoleMappings" EntityType="SampleDbModel.UserRoleMapping" />
-    <AssociationSet Name="FK_UserRoleMapping_Rolemaster" Association="SampleDbModel.FK_UserRoleMapping_Rolemaster">
+    <EntitySet Name="Rolemasters" EntityType="ddc_login2Model.Rolemaster" />
+    <EntitySet Name="UserRoleMappings" EntityType="ddc_login2Model.UserRoleMapping" />
+    <AssociationSet Name="FK_UserRoleMapping_Rolemaster" Association="ddc_login2Model.FK_UserRoleMapping_Rolemaster">
       <End Role="Rolemaster" EntitySet="Rolemasters" />
       <End Role="UserRoleMapping" EntitySet="UserRoleMappings" />
     </AssociationSet>
@@ -29,7 +29,7 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="rollname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="UserRoleMappings" Relationship="SampleDbModel.FK_UserRoleMapping_Rolemaster" FromRole="Rolemaster" ToRole="UserRoleMapping" />
+    <NavigationProperty Name="UserRoleMappings" Relationship="ddc_login2Model.FK_UserRoleMapping_Rolemaster" FromRole="Rolemaster" ToRole="UserRoleMapping" />
   </EntityType>
   <EntityType Name="UserRoleMapping">
     <Key>
@@ -38,11 +38,11 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Userid" Type="Int32" />
     <Property Name="Roleid" Type="Int32" />
-    <NavigationProperty Name="Rolemaster" Relationship="SampleDbModel.FK_UserRoleMapping_Rolemaster" FromRole="UserRoleMapping" ToRole="Rolemaster" />
+    <NavigationProperty Name="Rolemaster" Relationship="ddc_login2Model.FK_UserRoleMapping_Rolemaster" FromRole="UserRoleMapping" ToRole="Rolemaster" />
   </EntityType>
   <Association Name="FK_UserRoleMapping_Rolemaster">
-    <End Type="SampleDbModel.Rolemaster" Role="Rolemaster" Multiplicity="0..1" />
-    <End Type="SampleDbModel.UserRoleMapping" Role="UserRoleMapping" Multiplicity="*" />
+    <End Type="ddc_login2Model.Rolemaster" Role="Rolemaster" Multiplicity="0..1" />
+    <End Type="ddc_login2Model.UserRoleMapping" Role="UserRoleMapping" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Rolemaster">
         <PropertyRef Name="id" />

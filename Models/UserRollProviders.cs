@@ -37,7 +37,7 @@ namespace WebApplication1.Models
 
         public override string[] GetRolesForUser(string username)
         {
-            using (var context = new SampleDbEntities())
+            using (var context = new ddc_login2Entities())
             {
                 var userRoles = (from user in context.tbusrs
                                  join roleMapping in context.UserRoleMappings

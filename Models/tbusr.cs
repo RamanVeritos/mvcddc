@@ -21,6 +21,7 @@ namespace WebApplication1.Models
         public string usrunm { get; set; }
         [Required]
         [DataType(DataType.Password)]
+        [Display(Name = "Password")]
         public string usrpwd { get; set; }
         public string usreml { get; set; }
         public Nullable<int> usrmob { get; set; }

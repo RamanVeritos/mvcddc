@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using WebApplication1.Models;
 namespace WebApplication1.Controllers
 {
    [Authorize]
     public class MainController : Controller
     {
         // GET: Main
-        [Authorize(Roles = "Admin,supervisor")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
-            return View();
+            using (var ctx = new ddc1Entities1())
+            {
+                //Get student name of string type
+                var studentName = ctx.Database.SqlQuery<showdata>("select reg_type as Regtype,count(reg_type) as Totalcount from tb_candidate where udf2_v=5 group by reg_type").ToList();
+                return View(studentName);
+                //or
+                // string studentName = ctx.Database.SqlQuery<string>("Select studentname from Student where studentid=@id", new SqlParameter("@id", 1)).FirstOrDefault();
+            }
         }
 
         public ActionResult Admin()

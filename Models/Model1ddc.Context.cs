@@ -13,10 +13,10 @@ namespace WebApplication1.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ddc_login2Entities : DbContext
+    public partial class ddc1Entities1 : DbContext
     {
-        public ddc_login2Entities()
-            : base("name=ddc_login2Entities")
+        public ddc1Entities1()
+            : base("name=ddc1Entities1")
         {
         }
     
@@ -25,8 +25,5 @@ namespace WebApplication1.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tbusr> tbusrs { get; set; }
-        public virtual DbSet<Rolemaster> Rolemasters { get; set; }
-        public virtual DbSet<UserRoleMapping> UserRoleMappings { get; set; }
     }
 }

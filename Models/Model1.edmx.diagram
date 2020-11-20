@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="35069e71de36469480cc1b3fa028ea99" Name="Diagram1">
-        <EntityTypeShape EntityType="SampleDbModel.tbusr" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SampleDbModel.Rolemaster" Width="1.5" PointX="3.375" PointY="1" />
-        <EntityTypeShape EntityType="SampleDbModel.UserRoleMapping" Width="1.5" PointX="5.625" PointY="0.875" />
-        <AssociationConnector Association="SampleDbModel.FK_UserRoleMapping_Rolemaster" />
+      <Diagram DiagramId="323fa9f57018464cb51615edb4c24a24" Name="Diagram1">
+        <EntityTypeShape EntityType="ddc_login2Model.tbusr" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ddc_login2Model.Rolemaster" Width="1.5" PointX="3.375" PointY="1" />
+        <EntityTypeShape EntityType="ddc_login2Model.UserRoleMapping" Width="1.5" PointX="5.625" PointY="0.875" />
+        <AssociationConnector Association="ddc_login2Model.FK_UserRoleMapping_Rolemaster" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

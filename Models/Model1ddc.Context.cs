@@ -21,10 +21,13 @@ namespace WebApplication1.Models
             : base("name=ddc1Entities1")
         {
         }
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
+    
+        public virtual DbSet<Tb_candidate> Tb_candidate { get; set; }
     
         public virtual ObjectResult<getapplicationcountdata_Result1> getapplicationcountdata()
         {

@@ -4,15 +4,108 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ddc1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ddc1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Tb_candidate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Reg_for" Type="varchar" MaxLength="100" />
+          <Property Name="eml" Type="varchar" MaxLength="100" />
+          <Property Name="Mob" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Appl_nam" Type="varchar" MaxLength="100" />
+          <Property Name="Appl_fath_nam" Type="varchar" MaxLength="100" />
+          <Property Name="app_mothr_nam" Type="varchar" MaxLength="100" />
+          <Property Name="gender" Type="varchar" MaxLength="50" />
+          <Property Name="Merit_status" Type="varchar" MaxLength="50" />
+          <Property Name="hsbnd_nam" Type="varchar" MaxLength="100" />
+          <Property Name="dob" Type="varchar" MaxLength="50" />
+          <Property Name="birth_plc" Type="varchar" MaxLength="200" />
+          <Property Name="nation" Type="varchar" MaxLength="50" />
+          <Property Name="othr_nation" Type="varchar" MaxLength="200" />
+          <Property Name="res_add" Type="varchar" MaxLength="2000" />
+          <Property Name="res_cors_add" Type="varchar" MaxLength="1000" />
+          <Property Name="cty" Type="varchar" MaxLength="200" />
+          <Property Name="dist" Type="varchar" MaxLength="200" />
+          <Property Name="pin_cod" Type="int" />
+          <Property Name="mat_crs_nam" Type="varchar" MaxLength="100" />
+          <Property Name="mat_bord_nam" Type="varchar" MaxLength="2000" />
+          <Property Name="mat_colg_schol" Type="varchar" MaxLength="2000" />
+          <Property Name="mat_adm_yr" Type="varchar" MaxLength="100" />
+          <Property Name="mat_pass_yr" Type="varchar" MaxLength="100" />
+          <Property Name="mat_obt_mark" Type="int" />
+          <Property Name="mat_total_mark" Type="int" />
+          <Property Name="mat_percentage" Type="float" />
+          <Property Name="reg_no_pnrc" Type="varchar" MaxLength="50" />
+          <Property Name="mid_reg_no" Type="varchar" MaxLength="50" />
+          <Property Name="reg_dat_pnrc" Type="varchar" MaxLength="50" />
+          <Property Name="high_crs_nam" Type="varchar" MaxLength="500" />
+          <Property Name="high_bord_nam" Type="varchar" MaxLength="2000" />
+          <Property Name="high_colg_school" Type="varchar" MaxLength="2000" />
+          <Property Name="high_adm_yr" Type="varchar" MaxLength="100" />
+          <Property Name="high_pass_yr" Type="varchar" MaxLength="100" />
+          <Property Name="high_trng_comp_on" Type="varchar" MaxLength="50" />
+          <Property Name="high_obt_mark" Type="int" />
+          <Property Name="high_total_mark" Type="int" />
+          <Property Name="high_percentage" Type="float" />
+          <Property Name="high_speclization" Type="varchar" MaxLength="500" />
+          <Property Name="first_trng_place" Type="varchar" MaxLength="500" />
+          <Property Name="first_trng_frm" Type="varchar" MaxLength="500" />
+          <Property Name="first_trng_to" Type="varchar" MaxLength="500" />
+          <Property Name="sec_trng_place" Type="varchar" MaxLength="500" />
+          <Property Name="sec_trng_frm" Type="ntext" />
+          <Property Name="sec_trng_to" Type="varchar" MaxLength="500" />
+          <Property Name="thrd_trng_place" Type="varchar" MaxLength="500" />
+          <Property Name="thrd_trng_frm" Type="varchar" MaxLength="500" />
+          <Property Name="thrd_trng_to" Type="varchar" MaxLength="500" />
+          <Property Name="trng_duratin" Type="varchar" MaxLength="500" />
+          <Property Name="rsn_gap" Type="varchar" MaxLength="1000" />
+          <Property Name="reg_type" Type="varchar" MaxLength="100" />
+          <Property Name="parnt_state" Type="varchar" MaxLength="100" />
+          <Property Name="noc_cert" Type="varchar" MaxLength="500" />
+          <Property Name="appointment" Type="datetime" />
+          <Property Name="tym_slot" Type="varchar" MaxLength="50" />
+          <Property Name="pay_mode" Type="varchar" MaxLength="50" />
+          <Property Name="ammount" Type="varchar" MaxLength="50" />
+          <Property Name="pay_status" Type="varchar" MaxLength="50" />
+          <Property Name="sr_no" Type="varchar" MaxLength="100" />
+          <Property Name="midwifery_reg_no" Type="varchar" MaxLength="100" />
+          <Property Name="nurse_reg_no" Type="varchar" MaxLength="100" />
+          <Property Name="date_of_app" Type="datetime" />
+          <Property Name="date_of_reg" Type="datetime" />
+          <Property Name="date_of_exp" Type="datetime" />
+          <Property Name="certificate_issue_date" Type="datetime" />
+          <Property Name="udf1_v" Type="varchar" MaxLength="200" />
+          <Property Name="udf2_v" Type="varchar" MaxLength="2000" />
+          <Property Name="udf3_v" Type="varchar" MaxLength="2000" />
+          <Property Name="perm_appointment" Type="datetime" />
+          <Property Name="perm_tymslot" Type="varchar" MaxLength="100" />
+          <Property Name="udf5_v" Type="varchar" MaxLength="1000" />
+          <Property Name="udf6_v" Type="varchar" MaxLength="1000" />
+          <Property Name="udf3_int" Type="int" />
+          <Property Name="udf4_int" Type="int" />
+          <Property Name="udf5_dat" Type="varchar" MaxLength="50" />
+          <Property Name="udf6_dat" Type="datetime" />
+          <Property Name="crs3nam" Type="varchar" MaxLength="50" />
+          <Property Name="crs3unvnam" Type="varchar" MaxLength="200" />
+          <Property Name="crs3passyr" Type="varchar" MaxLength="50" />
+          <Property Name="crs3specialization" Type="varchar" MaxLength="100" />
+          <Property Name="udf1" Type="varchar" MaxLength="50" />
+          <Property Name="udf2" Type="varchar" MaxLength="50" />
+          <Property Name="udf3" Type="varchar" MaxLength="50" />
+          <Property Name="udf4" Type="datetime" />
+        </EntityType>
         <Function Name="getapplicationcountdata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ddc1" />
-        <EntityContainer Name="ddc1ModelStoreContainer" />
+        <EntityContainer Name="ddc1ModelStoreContainer">
+          <EntitySet Name="Tb_candidate" EntityType="Self.Tb_candidate" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ddc1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="ddc1Entities1" annotation:LazyLoadingEnabled="true" >
           <FunctionImport Name="getapplicationcountdata" ReturnType="Collection(ddc1Model.getapplicationcountdata_Result1)" />
+          <EntitySet Name="Tb_candidate" EntityType="ddc1Model.Tb_candidate" />
         </EntityContainer>
         <ComplexType Name="getapplicationcountdata_Result">
           <Property Type="String" Name="Regtype" Nullable="true" MaxLength="100" />
@@ -22,6 +115,96 @@
           <Property Type="String" Name="Regtype" Nullable="true" MaxLength="100" />
           <Property Type="Int32" Name="Totalcount" Nullable="true" />
         </ComplexType>
+        <EntityType Name="Tb_candidate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Reg_for" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="eml" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Mob" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Appl_nam" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Appl_fath_nam" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="app_mothr_nam" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Merit_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hsbnd_nam" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="dob" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="birth_plc" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="nation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="othr_nation" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="res_add" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="res_cors_add" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="cty" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="dist" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="pin_cod" Type="Int32" />
+          <Property Name="mat_crs_nam" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="mat_bord_nam" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="mat_colg_schol" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="mat_adm_yr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="mat_pass_yr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="mat_obt_mark" Type="Int32" />
+          <Property Name="mat_total_mark" Type="Int32" />
+          <Property Name="mat_percentage" Type="Double" />
+          <Property Name="reg_no_pnrc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mid_reg_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="reg_dat_pnrc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="high_crs_nam" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="high_bord_nam" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="high_colg_school" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="high_adm_yr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="high_pass_yr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="high_trng_comp_on" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="high_obt_mark" Type="Int32" />
+          <Property Name="high_total_mark" Type="Int32" />
+          <Property Name="high_percentage" Type="Double" />
+          <Property Name="high_speclization" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="first_trng_place" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="first_trng_frm" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="first_trng_to" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="sec_trng_place" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="sec_trng_frm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="sec_trng_to" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="thrd_trng_place" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="thrd_trng_frm" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="thrd_trng_to" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="trng_duratin" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="rsn_gap" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="reg_type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="parnt_state" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="noc_cert" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="appointment" Type="DateTime" Precision="3" />
+          <Property Name="tym_slot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pay_mode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ammount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pay_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sr_no" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="midwifery_reg_no" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="nurse_reg_no" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="date_of_app" Type="DateTime" Precision="3" />
+          <Property Name="date_of_reg" Type="DateTime" Precision="3" />
+          <Property Name="date_of_exp" Type="DateTime" Precision="3" />
+          <Property Name="certificate_issue_date" Type="DateTime" Precision="3" />
+          <Property Name="udf1_v" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="udf2_v" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="udf3_v" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="perm_appointment" Type="DateTime" Precision="3" />
+          <Property Name="perm_tymslot" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="udf5_v" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="udf6_v" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="udf3_int" Type="Int32" />
+          <Property Name="udf4_int" Type="Int32" />
+          <Property Name="udf5_dat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="udf6_dat" Type="DateTime" Precision="3" />
+          <Property Name="crs3nam" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="crs3unvnam" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="crs3passyr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="crs3specialization" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="udf1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="udf2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="udf3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="udf4" Type="DateTime" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -36,6 +219,97 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="Tb_candidate">
+            <EntityTypeMapping TypeName="ddc1Model.Tb_candidate">
+              <MappingFragment StoreEntitySet="Tb_candidate">
+                <ScalarProperty Name="udf4" ColumnName="udf4" />
+                <ScalarProperty Name="udf3" ColumnName="udf3" />
+                <ScalarProperty Name="udf2" ColumnName="udf2" />
+                <ScalarProperty Name="udf1" ColumnName="udf1" />
+                <ScalarProperty Name="crs3specialization" ColumnName="crs3specialization" />
+                <ScalarProperty Name="crs3passyr" ColumnName="crs3passyr" />
+                <ScalarProperty Name="crs3unvnam" ColumnName="crs3unvnam" />
+                <ScalarProperty Name="crs3nam" ColumnName="crs3nam" />
+                <ScalarProperty Name="udf6_dat" ColumnName="udf6_dat" />
+                <ScalarProperty Name="udf5_dat" ColumnName="udf5_dat" />
+                <ScalarProperty Name="udf4_int" ColumnName="udf4_int" />
+                <ScalarProperty Name="udf3_int" ColumnName="udf3_int" />
+                <ScalarProperty Name="udf6_v" ColumnName="udf6_v" />
+                <ScalarProperty Name="udf5_v" ColumnName="udf5_v" />
+                <ScalarProperty Name="perm_tymslot" ColumnName="perm_tymslot" />
+                <ScalarProperty Name="perm_appointment" ColumnName="perm_appointment" />
+                <ScalarProperty Name="udf3_v" ColumnName="udf3_v" />
+                <ScalarProperty Name="udf2_v" ColumnName="udf2_v" />
+                <ScalarProperty Name="udf1_v" ColumnName="udf1_v" />
+                <ScalarProperty Name="certificate_issue_date" ColumnName="certificate_issue_date" />
+                <ScalarProperty Name="date_of_exp" ColumnName="date_of_exp" />
+                <ScalarProperty Name="date_of_reg" ColumnName="date_of_reg" />
+                <ScalarProperty Name="date_of_app" ColumnName="date_of_app" />
+                <ScalarProperty Name="nurse_reg_no" ColumnName="nurse_reg_no" />
+                <ScalarProperty Name="midwifery_reg_no" ColumnName="midwifery_reg_no" />
+                <ScalarProperty Name="sr_no" ColumnName="sr_no" />
+                <ScalarProperty Name="pay_status" ColumnName="pay_status" />
+                <ScalarProperty Name="ammount" ColumnName="ammount" />
+                <ScalarProperty Name="pay_mode" ColumnName="pay_mode" />
+                <ScalarProperty Name="tym_slot" ColumnName="tym_slot" />
+                <ScalarProperty Name="appointment" ColumnName="appointment" />
+                <ScalarProperty Name="noc_cert" ColumnName="noc_cert" />
+                <ScalarProperty Name="parnt_state" ColumnName="parnt_state" />
+                <ScalarProperty Name="reg_type" ColumnName="reg_type" />
+                <ScalarProperty Name="rsn_gap" ColumnName="rsn_gap" />
+                <ScalarProperty Name="trng_duratin" ColumnName="trng_duratin" />
+                <ScalarProperty Name="thrd_trng_to" ColumnName="thrd_trng_to" />
+                <ScalarProperty Name="thrd_trng_frm" ColumnName="thrd_trng_frm" />
+                <ScalarProperty Name="thrd_trng_place" ColumnName="thrd_trng_place" />
+                <ScalarProperty Name="sec_trng_to" ColumnName="sec_trng_to" />
+                <ScalarProperty Name="sec_trng_frm" ColumnName="sec_trng_frm" />
+                <ScalarProperty Name="sec_trng_place" ColumnName="sec_trng_place" />
+                <ScalarProperty Name="first_trng_to" ColumnName="first_trng_to" />
+                <ScalarProperty Name="first_trng_frm" ColumnName="first_trng_frm" />
+                <ScalarProperty Name="first_trng_place" ColumnName="first_trng_place" />
+                <ScalarProperty Name="high_speclization" ColumnName="high_speclization" />
+                <ScalarProperty Name="high_percentage" ColumnName="high_percentage" />
+                <ScalarProperty Name="high_total_mark" ColumnName="high_total_mark" />
+                <ScalarProperty Name="high_obt_mark" ColumnName="high_obt_mark" />
+                <ScalarProperty Name="high_trng_comp_on" ColumnName="high_trng_comp_on" />
+                <ScalarProperty Name="high_pass_yr" ColumnName="high_pass_yr" />
+                <ScalarProperty Name="high_adm_yr" ColumnName="high_adm_yr" />
+                <ScalarProperty Name="high_colg_school" ColumnName="high_colg_school" />
+                <ScalarProperty Name="high_bord_nam" ColumnName="high_bord_nam" />
+                <ScalarProperty Name="high_crs_nam" ColumnName="high_crs_nam" />
+                <ScalarProperty Name="reg_dat_pnrc" ColumnName="reg_dat_pnrc" />
+                <ScalarProperty Name="mid_reg_no" ColumnName="mid_reg_no" />
+                <ScalarProperty Name="reg_no_pnrc" ColumnName="reg_no_pnrc" />
+                <ScalarProperty Name="mat_percentage" ColumnName="mat_percentage" />
+                <ScalarProperty Name="mat_total_mark" ColumnName="mat_total_mark" />
+                <ScalarProperty Name="mat_obt_mark" ColumnName="mat_obt_mark" />
+                <ScalarProperty Name="mat_pass_yr" ColumnName="mat_pass_yr" />
+                <ScalarProperty Name="mat_adm_yr" ColumnName="mat_adm_yr" />
+                <ScalarProperty Name="mat_colg_schol" ColumnName="mat_colg_schol" />
+                <ScalarProperty Name="mat_bord_nam" ColumnName="mat_bord_nam" />
+                <ScalarProperty Name="mat_crs_nam" ColumnName="mat_crs_nam" />
+                <ScalarProperty Name="pin_cod" ColumnName="pin_cod" />
+                <ScalarProperty Name="dist" ColumnName="dist" />
+                <ScalarProperty Name="cty" ColumnName="cty" />
+                <ScalarProperty Name="res_cors_add" ColumnName="res_cors_add" />
+                <ScalarProperty Name="res_add" ColumnName="res_add" />
+                <ScalarProperty Name="othr_nation" ColumnName="othr_nation" />
+                <ScalarProperty Name="nation" ColumnName="nation" />
+                <ScalarProperty Name="birth_plc" ColumnName="birth_plc" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="hsbnd_nam" ColumnName="hsbnd_nam" />
+                <ScalarProperty Name="Merit_status" ColumnName="Merit_status" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="app_mothr_nam" ColumnName="app_mothr_nam" />
+                <ScalarProperty Name="Appl_fath_nam" ColumnName="Appl_fath_nam" />
+                <ScalarProperty Name="Appl_nam" ColumnName="Appl_nam" />
+                <ScalarProperty Name="Mob" ColumnName="Mob" />
+                <ScalarProperty Name="eml" ColumnName="eml" />
+                <ScalarProperty Name="Reg_for" ColumnName="Reg_for" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

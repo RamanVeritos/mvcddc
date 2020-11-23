@@ -1,8 +1,13 @@
-﻿@model IEnumerable<WebApplication1.Models.getapplicationcountdata_Result1>
+﻿@*@model IEnumerable<WebApplication1.Models.getapplicationcountdata_Result1>*@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
+<style>
+    .info-box {
+        padding:0px !important;
+    }
+</style>
 <section id="">
     <section class="">
         <!--overview start-->
@@ -17,58 +22,95 @@
         </div>
 
         <div class="row">
-            @foreach (var model1 in Model)
-            {
-                //string[] cars = { "Volvo", "BMW", "Ford", "Mazda", "", "", "" };
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="info-box blue-bg  @model1.Regtype.Replace(" ","")">
-                        <i class="fa fa-cloud-download"></i>
-                        <div class="count" style="font-size:23px;">@model1.Totalcount</div>
-                        <div class="title">RegName-@model1.Regtype</div>
-                    </div>
+            @*@foreach (var model1 in Model)
+        {
+            //string[] cars = { "Volvo", "BMW", "Ford", "Mazda", "", "", "" };
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box blue-bg  @model1.Regtype.Replace(" ","")">
+                    <i class="fa fa-cloud-download"></i>
+                    <div class="count" style="font-size:23px;">@model1.Totalcount</div>
+                    <div class="title">RegName-@model1.Regtype</div>
                 </div>
-            }
+            </div>
+        }*@
+            
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box blue-bg">
+                    <i class="fa fa-users"></i>
 
-            <!--<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <div class="info-box blue-bg">-->
-            <!--<i class="fa fa-cloud-download"></i>-->
-            <!--<div class="count">6.674</div>
-                <div class="title">Download</div>
-            </div>-->
-            <!--/.info-box-->
-            <!--</div>-->
+                    <div class="count">@ViewBag.count1.Totalcount</div>
+                    <div class="title">@ViewBag.count1.Regtype</div>
+                </div>
+                <!--/.info-box-->
+            </div>
             <!--/.col-->
-            <!--<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <div class="info-box brown-bg">
-                <i class="fa fa-shopping-cart"></i>
-                <div class="count">7.538</div>
-                <div class="title">Purchased</div>
-            </div>-->
-            <!--/.info-box-->
-            <!--</div>-->
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box brown-bg">
+                    <i class="fa fa-users"></i>
+
+                    <div class="count">@ViewBag.count2.Totalcount</div>
+                    <div class="title">@ViewBag.count2.Regtype</div>
+                </div>
+                <!--/.info-box-->
+            </div>
             <!--/.col-->
-            <!--<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <div class="info-box dark-bg">
-                <i class="fa fa-thumbs-o-up"></i>
-                <div class="count">4.362</div>
-                <div class="title">Order</div>
-            </div>-->
-            <!--/.info-box-->
-            <!--</div>-->
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box dark-bg">
+                    <i class="fa fa-users"></i>
+
+                    <div class="count">@ViewBag.count3.Totalcount</div>
+                    <div class="title">@ViewBag.count3.Regtype</div>
+                </div>
+                <!--/.info-box-->
+            </div>
             <!--/.col-->
-            <!--<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <div class="info-box green-bg">
-                <i class="fa fa-cubes"></i>
-                <div class="count">1.426</div>
-                <div class="title">Stock</div>
-            </div>-->
-            <!--/.info-box-->
-            <!--</div>-->
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box green-bg">
+                    <i class="fa fa-users"></i>
+
+                    <div class="count">@ViewBag.count4.Totalcount</div>
+                    <div class="title">@ViewBag.count4.Regtype</div>
+                </div>
+                <!--/.info-box-->
+            </div>
+
+
+
+
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box dark-bg">
+                    <i class="fa fa-users"></i>
+
+                    <div class="count">@ViewBag.count5.Totalcount</div>
+                    <div class="title">@ViewBag.count5.Regtype</div>
+                </div>
+                <!--/.info-box-->
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box green-bg">
+                    <i class="fa fa-users"></i>
+
+                    <div class="count">@ViewBag.count6.Totalcount</div>
+                    <div class="title">@ViewBag.count6.Regtype</div>
+                </div>
+                <!--/.info-box-->
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box brown-bg">
+                    <i class="fa fa-users"></i>
+
+                    <div class="count">@ViewBag.count7.Totalcount</div>
+                    <div class="title">@ViewBag.count7.Regtype</div>
+                </div>
+                <!--/.info-box-->
+            </div>
+
             <!--/.col-->
 
         </div>
-        <!--/.row-->
-    </section>
+            <!--/.row-->
+</section>
     <div class="text-right">
         <div class="credits">
             <!--
@@ -83,11 +125,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(function () {
-            $(".FIRSTREGISTRATION").addClass("blue-bg");
-            $(".TRANSFEROFREGISTRATIONFORMOTHERSTATE").addClass("brown-bg");
-            $(".AdditionofQualification").addClass("dark-bg");
-            $(".RENEWALREGISTRATION").addClass("green-bg");
-            $(".TRANSFEROFREGISTRATIONFROMOTHERSTATE").addClass("brown-bg");
+            //$(".FIRSTREGISTRATION").addClass("blue-bg");
+            //$(".TRANSFEROFREGISTRATIONFORMOTHERSTATE").addClass("brown-bg");
+            //$(".AdditionofQualification").addClass("dark-bg");
+            //$(".RENEWALREGISTRATION").addClass("green-bg");
+            //$(".TRANSFEROFREGISTRATIONFROMOTHERSTATE").addClass("brown-bg");
         });
 
     </script>

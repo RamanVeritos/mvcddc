@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "Ad_Seach_Prac";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@*<h2>Search Practitioner</h2>*@
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="page-header"><i class="fa fa-laptop"></i>Dashboard</h3>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="index.html">Search Practitioner</a></li>
+            <li><i class="fa fa-laptop"></i>Dashboard</li>
+        </ol>
+    </div>
+</div>
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Form Elements
+                </header>
+                <div class="panel-body">
+
+                    @using (Html.BeginForm("Ad_Seach_Prac", "Main", FormMethod.Post, new { @class = "" }))
+                    {
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Practioner First Name </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Practitioner Last Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Registration Number</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Residential City</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        @*<div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Residential City</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>*@
+                    </div>
+                    }
+                </div>
+</section>
+           
+        </div>
+    </div>
+
+
+
+

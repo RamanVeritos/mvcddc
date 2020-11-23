@@ -1,4 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ddc1ModelStoreContainer" CdmEntityContainer="ddc1Entities1" />
+  <EntityContainerMapping StorageEntityContainer="ddc1ModelStoreContainer" CdmEntityContainer="ddc1Entities1">
+    <FunctionImportMapping FunctionImportName="getapplicationcountdata" FunctionName="ddc1Model.Store.getapplicationcountdata">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ddc1Model.getapplicationcountdata_Result1">
+          <ScalarProperty Name="Regtype" ColumnName="Regtype" />
+          <ScalarProperty Name="Totalcount" ColumnName="Totalcount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
 </Mapping>

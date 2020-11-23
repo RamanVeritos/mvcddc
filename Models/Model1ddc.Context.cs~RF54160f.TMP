@@ -21,6 +21,7 @@ namespace WebApplication1.Models
             : base("name=ddc1Entities1")
         {
         }
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

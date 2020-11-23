@@ -15,11 +15,17 @@ namespace WebApplication1.Controllers
         {
             using (var ctx = new ddc1Entities1())
             {
-                //Get student name of string type
-                var studentName = ctx.Database.SqlQuery<showdata>("select reg_type as Regtype,count(reg_type) as Totalcount from tb_candidate where udf2_v=5 group by reg_type").ToList();
-                return View(studentName);
-                //or
-                // string studentName = ctx.Database.SqlQuery<string>("Select studentname from Student where studentid=@id", new SqlParameter("@id", 1)).FirstOrDefault();
+
+                // List<getapplicationcountdata_Result1> data = ctx.getapplicationcountdata().ToList();
+                ViewBag.count1 = ctx.Database.SqlQuery<showdata>("select reg_type as Regtype,count(reg_type) as Totalcount from tb_candidate where udf2_v=5 and reg_type='FIRST REGISTRATION' group by reg_type").FirstOrDefault();
+                ViewBag.count2 = ctx.Database.SqlQuery<showdata>("select reg_type as Regtype,count(reg_type) as Totalcount from tb_candidate where udf2_v=5 and reg_type='TRANSFER OF REGISTRATION FORM OTHER STATE' group by reg_type").FirstOrDefault();
+                ViewBag.count3 = ctx.Database.SqlQuery<showdata>("select reg_type as Regtype,count(reg_type) as Totalcount from tb_candidate where udf2_v=5 and reg_type='' group by reg_type").FirstOrDefault();
+                ViewBag.count4 = ctx.Database.SqlQuery<showdata>("select reg_type as Regtype,count(reg_type) as Totalcount from tb_candidate where udf2_v=5 and reg_type='' group by reg_type ").FirstOrDefault();
+                ViewBag.count5 = ctx.Database.SqlQuery<showdata>("select reg_type as Regtype,count(reg_type) as Totalcount from tb_candidate where udf2_v=5 and reg_type='' group by reg_type ").FirstOrDefault();
+                ViewBag.count6 = ctx.Database.SqlQuery<showdata>("select reg_type as Regtype,count(reg_type) as Totalcount from tb_candidate where udf2_v=5 and reg_type='' group by reg_type ").FirstOrDefault();
+                ViewBag.count7 = ctx.Database.SqlQuery<showdata>("select reg_type as Regtype,count(reg_type) as Totalcount from tb_candidate where udf2_v=5 and reg_type='' group by reg_type ").FirstOrDefault();
+                return View();
+
             }
         }
 

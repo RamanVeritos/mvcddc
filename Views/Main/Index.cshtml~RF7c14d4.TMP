@@ -20,11 +20,11 @@
             @foreach (var model1 in Model)
             {
                 //string[] cars = { "Volvo", "BMW", "Ford", "Mazda", "", "", "" };
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
                     <div class="info-box blue-bg  @model1.Regtype.Replace(" ","")">
-                        <i class="fa fa-cloud-download"></i>
-                        <div class="count" style="font-size:23px;">@model1.Totalcount</div>
+                        <!--<i class="fa fa-cloud-download"></i>-->
                         <div class="title">RegName-@model1.Regtype</div>
+                        <div class="count" style="font-size:23px;">Totalcount-@model1.Totalcount</div>
                     </div>
                 </div>
             }

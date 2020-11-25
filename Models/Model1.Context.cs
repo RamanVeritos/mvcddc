@@ -28,5 +28,6 @@ namespace WebApplication1.Models
         public virtual DbSet<tbusr> tbusrs { get; set; }
         public virtual DbSet<Rolemaster> Rolemasters { get; set; }
         public virtual DbSet<UserRoleMapping> UserRoleMappings { get; set; }
+        public virtual DbSet<tbdoc> tbdocs { get; set; }
     }
 }

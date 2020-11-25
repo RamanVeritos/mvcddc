@@ -22,6 +22,7 @@
       <End Role="Rolemaster" EntitySet="Rolemasters" />
       <End Role="UserRoleMapping" EntitySet="UserRoleMappings" />
     </AssociationSet>
+    <EntitySet Name="tbdocs" EntityType="ddc_login2Model.tbdoc" />
   </EntityContainer>
   <EntityType Name="Rolemaster">
     <Key>
@@ -52,4 +53,56 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="tbdoc">
+    <Key>
+      <PropertyRef Name="doccod" />
+    </Key>
+    <Property Name="doccod" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="docregnum" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="doctit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="docfnm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="doclnm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="docfatfnm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="docfatlnm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="docdob" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docbirpla" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docetv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="docgen" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="docnat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docrescty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docresctytyp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="docresadd" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="docrestel" Type="Int64" />
+    <Property Name="docrespin" Type="Int32" />
+    <Property Name="docressta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docrescou" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docprocty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docproctytyp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="docproadd" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="docprotel" Type="Int64" />
+    <Property Name="docpropin" Type="Int32" />
+    <Property Name="docprosta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docprocou" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="doceml" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docpwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docmob" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="docsig" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docimg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docfin" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="doceye" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="docmir" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="docdeg1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="docuni1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="docyop1" Type="Int32" />
+    <Property Name="docdeg2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="docuni2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="docyop2" Type="Int32" />
+    <Property Name="docdeg3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="docuni3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="docyop3" Type="Int32" />
+    <Property Name="docsta" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="doccdt" Type="DateTime" Precision="3" />
+    <Property Name="docudt" Type="DateTime" Precision="3" />
+    <Property Name="docisdel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
 </Schema>

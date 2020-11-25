@@ -34,8 +34,8 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-sm-4 control-label">Practioner First Name </label>
-                                <div class="col-sm-8">
+                                <label class="">Practioner First Name </label>
+                                <div class="">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
@@ -43,8 +43,17 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-sm-4 control-label">Practitioner Last Name</label>
-                                <div class="col-sm-8">
+                                <label class="">Practitioner Last Name</label>
+                                <div class="">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="">Registration Number</label>
+                                <div class="">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
@@ -52,30 +61,48 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-sm-4 control-label">Registration Number</label>
-                                <div class="col-sm-8">
+                                <label class="">Residential City</label>
+                                <div class="">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="col-sm-4 control-label">Residential City</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
+                                <label class="">Professional City</label>
+                                <div class="">
+
+                                    @Html.DropDownList("ProfessionalCity", new List<SelectListItem>
+        {
+            ViewBag.ProfessionalCity
+            //new SelectListItem { Text = "IT", Value = "1", Selected=true},
+            //new SelectListItem { Text = "HR", Value = "2"},
+            //new SelectListItem { Text = "Payroll", Value = "3"}
+        },"Select Department",htmlAttributes:new {@class= "form-control"})
+
+
+
+                                    @*<input type="text" class="form-control">*@
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-md-2" style="float:right;margin-top:31px">
+                            
+                                
+                                <div class="" >
+                                    <input type="submit" class="form-control btn btn-success mt-2" value="Search">
+                                </div>
+                           
                         </div>
 
                         @*<div class="col-md-6">
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label">Residential City</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>*@
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Residential City</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>*@
                     </div>
                     }
                 </div>

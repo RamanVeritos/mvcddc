@@ -7,6 +7,58 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="rollname" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="tbdoc">
+    <Key>
+      <PropertyRef Name="doccod" />
+    </Key>
+    <Property Name="doccod" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="docregnum" Type="varchar" MaxLength="100" />
+    <Property Name="doctit" Type="varchar" MaxLength="10" />
+    <Property Name="docfnm" Type="varchar" MaxLength="100" />
+    <Property Name="doclnm" Type="varchar" MaxLength="100" />
+    <Property Name="docfatfnm" Type="varchar" MaxLength="100" />
+    <Property Name="docfatlnm" Type="varchar" MaxLength="100" />
+    <Property Name="docdob" Type="varchar" MaxLength="50" />
+    <Property Name="docbirpla" Type="varchar" MaxLength="50" />
+    <Property Name="docetv" Type="char" MaxLength="1" />
+    <Property Name="docgen" Type="varchar" MaxLength="10" />
+    <Property Name="docnat" Type="varchar" MaxLength="50" />
+    <Property Name="docrescty" Type="varchar" MaxLength="50" />
+    <Property Name="docresctytyp" Type="varchar" MaxLength="10" />
+    <Property Name="docresadd" Type="varchar" MaxLength="500" />
+    <Property Name="docrestel" Type="bigint" />
+    <Property Name="docrespin" Type="int" />
+    <Property Name="docressta" Type="varchar" MaxLength="50" />
+    <Property Name="docrescou" Type="varchar" MaxLength="50" />
+    <Property Name="docprocty" Type="varchar" MaxLength="50" />
+    <Property Name="docproctytyp" Type="varchar" MaxLength="10" />
+    <Property Name="docproadd" Type="varchar" MaxLength="500" />
+    <Property Name="docprotel" Type="bigint" />
+    <Property Name="docpropin" Type="int" />
+    <Property Name="docprosta" Type="varchar" MaxLength="50" />
+    <Property Name="docprocou" Type="varchar" MaxLength="50" />
+    <Property Name="doceml" Type="varchar" MaxLength="50" />
+    <Property Name="docpwd" Type="varchar" MaxLength="50" />
+    <Property Name="docmob" Type="varchar" MaxLength="20" />
+    <Property Name="docsig" Type="varchar" MaxLength="50" />
+    <Property Name="docimg" Type="varchar" MaxLength="50" />
+    <Property Name="docfin" Type="varchar" MaxLength="100" />
+    <Property Name="doceye" Type="varchar" MaxLength="100" />
+    <Property Name="docmir" Type="varchar" MaxLength="100" />
+    <Property Name="docdeg1" Type="varchar" MaxLength="100" />
+    <Property Name="docuni1" Type="varchar" MaxLength="100" />
+    <Property Name="docyop1" Type="int" />
+    <Property Name="docdeg2" Type="varchar" MaxLength="100" />
+    <Property Name="docuni2" Type="varchar" MaxLength="100" />
+    <Property Name="docyop2" Type="int" />
+    <Property Name="docdeg3" Type="varchar" MaxLength="100" />
+    <Property Name="docuni3" Type="varchar" MaxLength="100" />
+    <Property Name="docyop3" Type="int" />
+    <Property Name="docsta" Type="varchar" MaxLength="20" />
+    <Property Name="doccdt" Type="datetime" />
+    <Property Name="docudt" Type="datetime" />
+    <Property Name="docisdel" Type="char" MaxLength="1" />
+  </EntityType>
   <EntityType Name="tbusr">
     <Key>
       <PropertyRef Name="usrcod" />
@@ -43,6 +95,7 @@
   </Association>
   <EntityContainer Name="ddc_login2ModelStoreContainer">
     <EntitySet Name="Rolemaster" EntityType="Self.Rolemaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbdoc" EntityType="Self.tbdoc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbusr" EntityType="Self.tbusr" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserRoleMapping" EntityType="Self.UserRoleMapping" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_UserRoleMapping_Rolemaster" Association="Self.FK_UserRoleMapping_Rolemaster">

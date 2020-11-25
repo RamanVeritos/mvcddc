@@ -174,8 +174,14 @@
     <Compile Include="Models\Rolemaster.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tbdoc.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\tbusr.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tb_candidate.cs">
+      <DependentUpon>Model1ddc.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserRoleMapping.cs">
       <DependentUpon>Model1.tt</DependentUpon>

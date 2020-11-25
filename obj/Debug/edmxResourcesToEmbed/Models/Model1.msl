@@ -33,5 +33,58 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tbdocs">
+      <EntityTypeMapping TypeName="ddc_login2Model.tbdoc">
+        <MappingFragment StoreEntitySet="tbdoc">
+          <ScalarProperty Name="docisdel" ColumnName="docisdel" />
+          <ScalarProperty Name="docudt" ColumnName="docudt" />
+          <ScalarProperty Name="doccdt" ColumnName="doccdt" />
+          <ScalarProperty Name="docsta" ColumnName="docsta" />
+          <ScalarProperty Name="docyop3" ColumnName="docyop3" />
+          <ScalarProperty Name="docuni3" ColumnName="docuni3" />
+          <ScalarProperty Name="docdeg3" ColumnName="docdeg3" />
+          <ScalarProperty Name="docyop2" ColumnName="docyop2" />
+          <ScalarProperty Name="docuni2" ColumnName="docuni2" />
+          <ScalarProperty Name="docdeg2" ColumnName="docdeg2" />
+          <ScalarProperty Name="docyop1" ColumnName="docyop1" />
+          <ScalarProperty Name="docuni1" ColumnName="docuni1" />
+          <ScalarProperty Name="docdeg1" ColumnName="docdeg1" />
+          <ScalarProperty Name="docmir" ColumnName="docmir" />
+          <ScalarProperty Name="doceye" ColumnName="doceye" />
+          <ScalarProperty Name="docfin" ColumnName="docfin" />
+          <ScalarProperty Name="docimg" ColumnName="docimg" />
+          <ScalarProperty Name="docsig" ColumnName="docsig" />
+          <ScalarProperty Name="docmob" ColumnName="docmob" />
+          <ScalarProperty Name="docpwd" ColumnName="docpwd" />
+          <ScalarProperty Name="doceml" ColumnName="doceml" />
+          <ScalarProperty Name="docprocou" ColumnName="docprocou" />
+          <ScalarProperty Name="docprosta" ColumnName="docprosta" />
+          <ScalarProperty Name="docpropin" ColumnName="docpropin" />
+          <ScalarProperty Name="docprotel" ColumnName="docprotel" />
+          <ScalarProperty Name="docproadd" ColumnName="docproadd" />
+          <ScalarProperty Name="docproctytyp" ColumnName="docproctytyp" />
+          <ScalarProperty Name="docprocty" ColumnName="docprocty" />
+          <ScalarProperty Name="docrescou" ColumnName="docrescou" />
+          <ScalarProperty Name="docressta" ColumnName="docressta" />
+          <ScalarProperty Name="docrespin" ColumnName="docrespin" />
+          <ScalarProperty Name="docrestel" ColumnName="docrestel" />
+          <ScalarProperty Name="docresadd" ColumnName="docresadd" />
+          <ScalarProperty Name="docresctytyp" ColumnName="docresctytyp" />
+          <ScalarProperty Name="docrescty" ColumnName="docrescty" />
+          <ScalarProperty Name="docnat" ColumnName="docnat" />
+          <ScalarProperty Name="docgen" ColumnName="docgen" />
+          <ScalarProperty Name="docetv" ColumnName="docetv" />
+          <ScalarProperty Name="docbirpla" ColumnName="docbirpla" />
+          <ScalarProperty Name="docdob" ColumnName="docdob" />
+          <ScalarProperty Name="docfatlnm" ColumnName="docfatlnm" />
+          <ScalarProperty Name="docfatfnm" ColumnName="docfatfnm" />
+          <ScalarProperty Name="doclnm" ColumnName="doclnm" />
+          <ScalarProperty Name="docfnm" ColumnName="docfnm" />
+          <ScalarProperty Name="doctit" ColumnName="doctit" />
+          <ScalarProperty Name="docregnum" ColumnName="docregnum" />
+          <ScalarProperty Name="doccod" ColumnName="doccod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

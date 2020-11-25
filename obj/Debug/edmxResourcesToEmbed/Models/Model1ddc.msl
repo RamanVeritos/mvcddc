@@ -9,5 +9,96 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="Tb_candidate">
+      <EntityTypeMapping TypeName="ddc1Model.Tb_candidate">
+        <MappingFragment StoreEntitySet="Tb_candidate">
+          <ScalarProperty Name="udf4" ColumnName="udf4" />
+          <ScalarProperty Name="udf3" ColumnName="udf3" />
+          <ScalarProperty Name="udf2" ColumnName="udf2" />
+          <ScalarProperty Name="udf1" ColumnName="udf1" />
+          <ScalarProperty Name="crs3specialization" ColumnName="crs3specialization" />
+          <ScalarProperty Name="crs3passyr" ColumnName="crs3passyr" />
+          <ScalarProperty Name="crs3unvnam" ColumnName="crs3unvnam" />
+          <ScalarProperty Name="crs3nam" ColumnName="crs3nam" />
+          <ScalarProperty Name="udf6_dat" ColumnName="udf6_dat" />
+          <ScalarProperty Name="udf5_dat" ColumnName="udf5_dat" />
+          <ScalarProperty Name="udf4_int" ColumnName="udf4_int" />
+          <ScalarProperty Name="udf3_int" ColumnName="udf3_int" />
+          <ScalarProperty Name="udf6_v" ColumnName="udf6_v" />
+          <ScalarProperty Name="udf5_v" ColumnName="udf5_v" />
+          <ScalarProperty Name="perm_tymslot" ColumnName="perm_tymslot" />
+          <ScalarProperty Name="perm_appointment" ColumnName="perm_appointment" />
+          <ScalarProperty Name="udf3_v" ColumnName="udf3_v" />
+          <ScalarProperty Name="udf2_v" ColumnName="udf2_v" />
+          <ScalarProperty Name="udf1_v" ColumnName="udf1_v" />
+          <ScalarProperty Name="certificate_issue_date" ColumnName="certificate_issue_date" />
+          <ScalarProperty Name="date_of_exp" ColumnName="date_of_exp" />
+          <ScalarProperty Name="date_of_reg" ColumnName="date_of_reg" />
+          <ScalarProperty Name="date_of_app" ColumnName="date_of_app" />
+          <ScalarProperty Name="nurse_reg_no" ColumnName="nurse_reg_no" />
+          <ScalarProperty Name="midwifery_reg_no" ColumnName="midwifery_reg_no" />
+          <ScalarProperty Name="sr_no" ColumnName="sr_no" />
+          <ScalarProperty Name="pay_status" ColumnName="pay_status" />
+          <ScalarProperty Name="ammount" ColumnName="ammount" />
+          <ScalarProperty Name="pay_mode" ColumnName="pay_mode" />
+          <ScalarProperty Name="tym_slot" ColumnName="tym_slot" />
+          <ScalarProperty Name="appointment" ColumnName="appointment" />
+          <ScalarProperty Name="noc_cert" ColumnName="noc_cert" />
+          <ScalarProperty Name="parnt_state" ColumnName="parnt_state" />
+          <ScalarProperty Name="reg_type" ColumnName="reg_type" />
+          <ScalarProperty Name="rsn_gap" ColumnName="rsn_gap" />
+          <ScalarProperty Name="trng_duratin" ColumnName="trng_duratin" />
+          <ScalarProperty Name="thrd_trng_to" ColumnName="thrd_trng_to" />
+          <ScalarProperty Name="thrd_trng_frm" ColumnName="thrd_trng_frm" />
+          <ScalarProperty Name="thrd_trng_place" ColumnName="thrd_trng_place" />
+          <ScalarProperty Name="sec_trng_to" ColumnName="sec_trng_to" />
+          <ScalarProperty Name="sec_trng_frm" ColumnName="sec_trng_frm" />
+          <ScalarProperty Name="sec_trng_place" ColumnName="sec_trng_place" />
+          <ScalarProperty Name="first_trng_to" ColumnName="first_trng_to" />
+          <ScalarProperty Name="first_trng_frm" ColumnName="first_trng_frm" />
+          <ScalarProperty Name="first_trng_place" ColumnName="first_trng_place" />
+          <ScalarProperty Name="high_speclization" ColumnName="high_speclization" />
+          <ScalarProperty Name="high_percentage" ColumnName="high_percentage" />
+          <ScalarProperty Name="high_total_mark" ColumnName="high_total_mark" />
+          <ScalarProperty Name="high_obt_mark" ColumnName="high_obt_mark" />
+          <ScalarProperty Name="high_trng_comp_on" ColumnName="high_trng_comp_on" />
+          <ScalarProperty Name="high_pass_yr" ColumnName="high_pass_yr" />
+          <ScalarProperty Name="high_adm_yr" ColumnName="high_adm_yr" />
+          <ScalarProperty Name="high_colg_school" ColumnName="high_colg_school" />
+          <ScalarProperty Name="high_bord_nam" ColumnName="high_bord_nam" />
+          <ScalarProperty Name="high_crs_nam" ColumnName="high_crs_nam" />
+          <ScalarProperty Name="reg_dat_pnrc" ColumnName="reg_dat_pnrc" />
+          <ScalarProperty Name="mid_reg_no" ColumnName="mid_reg_no" />
+          <ScalarProperty Name="reg_no_pnrc" ColumnName="reg_no_pnrc" />
+          <ScalarProperty Name="mat_percentage" ColumnName="mat_percentage" />
+          <ScalarProperty Name="mat_total_mark" ColumnName="mat_total_mark" />
+          <ScalarProperty Name="mat_obt_mark" ColumnName="mat_obt_mark" />
+          <ScalarProperty Name="mat_pass_yr" ColumnName="mat_pass_yr" />
+          <ScalarProperty Name="mat_adm_yr" ColumnName="mat_adm_yr" />
+          <ScalarProperty Name="mat_colg_schol" ColumnName="mat_colg_schol" />
+          <ScalarProperty Name="mat_bord_nam" ColumnName="mat_bord_nam" />
+          <ScalarProperty Name="mat_crs_nam" ColumnName="mat_crs_nam" />
+          <ScalarProperty Name="pin_cod" ColumnName="pin_cod" />
+          <ScalarProperty Name="dist" ColumnName="dist" />
+          <ScalarProperty Name="cty" ColumnName="cty" />
+          <ScalarProperty Name="res_cors_add" ColumnName="res_cors_add" />
+          <ScalarProperty Name="res_add" ColumnName="res_add" />
+          <ScalarProperty Name="othr_nation" ColumnName="othr_nation" />
+          <ScalarProperty Name="nation" ColumnName="nation" />
+          <ScalarProperty Name="birth_plc" ColumnName="birth_plc" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="hsbnd_nam" ColumnName="hsbnd_nam" />
+          <ScalarProperty Name="Merit_status" ColumnName="Merit_status" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="app_mothr_nam" ColumnName="app_mothr_nam" />
+          <ScalarProperty Name="Appl_fath_nam" ColumnName="Appl_fath_nam" />
+          <ScalarProperty Name="Appl_nam" ColumnName="Appl_nam" />
+          <ScalarProperty Name="Mob" ColumnName="Mob" />
+          <ScalarProperty Name="eml" ColumnName="eml" />
+          <ScalarProperty Name="Reg_for" ColumnName="Reg_for" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebApplication1.Models.tbdoc>
+﻿@*@model IEnumerable<WebApplication1.Models.tbdoc>*@
 @{
     ViewBag.Title = "Ad_Seach_Prac";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
@@ -120,27 +120,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
-                                        @if (Model != null)
-                                        {
-                                            foreach (var data in Model)
-                                            {
-                                            <tr>
-                                            <td>@data.docfnm</td>
-                                            <td>@data.docfnm</td>
-                                            <td>@data.docfnm</td>
-                                            <td>@data.docfnm</td>
-                                            <td>@data.docfnm</td>
-                                            <td>@data.docfnm</td>
-                                            <td>@data.docfnm</td>
-                                            <td>@data.docfnm</td>
-                                            <td>@data.docfnm</td>
-                                            <td>@data.docfnm</td>
-                                            <td>@data.docfnm</td>
-                                            </tr>
-
-                                            }
-                                        }
+                                         @*@foreach (var data in Model)
+                                         {
+                                           
+                                         }*@
                                     </tbody>
                                 </table>
                             </div>

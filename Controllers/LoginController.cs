@@ -8,12 +8,13 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
+    [HandleError]
     public class LoginController : Controller
     {
+       
         // GET: Login
         public ActionResult Login()
         {
-           
             return View();
         }
         public ActionResult Logout()
@@ -33,10 +34,9 @@ namespace WebApplication1.Controllers
                     if (IsValidUser)
                     {
                         FormsAuthentication.SetAuthCookie(model.usrnam, false);
-                        return RedirectToAction("Index", "Main");
-                       
+                        return RedirectToAction("Ad_Seach_Prac", "Main");
                     }
-                    ModelState.AddModelError("", "invalid Username or Password");
+                    ModelState.AddModelError("","invalid Username or Password");
                     return View();
                 }
             }

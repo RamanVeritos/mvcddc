@@ -12,6 +12,8 @@ namespace WebApplication1.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class ddc_login2Entities : DbContext
     {
@@ -29,5 +31,55 @@ namespace WebApplication1.Models
         public virtual DbSet<Rolemaster> Rolemasters { get; set; }
         public virtual DbSet<UserRoleMapping> UserRoleMappings { get; set; }
         public virtual DbSet<tbdoc> tbdocs { get; set; }
+    
+        public virtual ObjectResult<tbdoc> search_pract(string docfnm, string doclnm, string docregnum, string docrescty, string docprocty)
+        {
+            var docfnmParameter = docfnm != null ?
+                new ObjectParameter("docfnm", docfnm) :
+                new ObjectParameter("docfnm", typeof(string));
+    
+            var doclnmParameter = doclnm != null ?
+                new ObjectParameter("doclnm", doclnm) :
+                new ObjectParameter("doclnm", typeof(string));
+    
+            var docregnumParameter = docregnum != null ?
+                new ObjectParameter("docregnum", docregnum) :
+                new ObjectParameter("docregnum", typeof(string));
+    
+            var docresctyParameter = docrescty != null ?
+                new ObjectParameter("docrescty", docrescty) :
+                new ObjectParameter("docrescty", typeof(string));
+    
+            var docproctyParameter = docprocty != null ?
+                new ObjectParameter("docprocty", docprocty) :
+                new ObjectParameter("docprocty", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<tbdoc>("search_pract", docfnmParameter, doclnmParameter, docregnumParameter, docresctyParameter, docproctyParameter);
+        }
+    
+        public virtual ObjectResult<tbdoc> search_pract(string docfnm, string doclnm, string docregnum, string docrescty, string docprocty, MergeOption mergeOption)
+        {
+            var docfnmParameter = docfnm != null ?
+                new ObjectParameter("docfnm", docfnm) :
+                new ObjectParameter("docfnm", typeof(string));
+    
+            var doclnmParameter = doclnm != null ?
+                new ObjectParameter("doclnm", doclnm) :
+                new ObjectParameter("doclnm", typeof(string));
+    
+            var docregnumParameter = docregnum != null ?
+                new ObjectParameter("docregnum", docregnum) :
+                new ObjectParameter("docregnum", typeof(string));
+    
+            var docresctyParameter = docrescty != null ?
+                new ObjectParameter("docrescty", docrescty) :
+                new ObjectParameter("docrescty", typeof(string));
+    
+            var docproctyParameter = docprocty != null ?
+                new ObjectParameter("docprocty", docprocty) :
+                new ObjectParameter("docprocty", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<tbdoc>("search_pract", mergeOption, docfnmParameter, doclnmParameter, docregnumParameter, docresctyParameter, docproctyParameter);
+        }
     }
 }

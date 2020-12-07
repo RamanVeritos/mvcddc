@@ -86,5 +86,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="search_pract" FunctionName="ddc_login2Model.Store.search_pract" />
   </EntityContainerMapping>
 </Mapping>

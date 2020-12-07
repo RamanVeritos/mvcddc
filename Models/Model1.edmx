@@ -98,6 +98,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="search_pract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="docfnm" Type="varchar" Mode="In" />
+          <Parameter Name="doclnm" Type="varchar" Mode="In" />
+          <Parameter Name="docregnum" Type="varchar" Mode="In" />
+          <Parameter Name="docrescty" Type="varchar" Mode="In" />
+          <Parameter Name="docprocty" Type="varchar" Mode="In" />
+        </Function>
         <EntityContainer Name="ddc_login2ModelStoreContainer">
           <EntitySet Name="Rolemaster" EntityType="Self.Rolemaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbdoc" EntityType="Self.tbdoc" Schema="dbo" store:Type="Tables" />
@@ -135,6 +142,13 @@
             <End Role="UserRoleMapping" EntitySet="UserRoleMappings" />
           </AssociationSet>
           <EntitySet Name="tbdocs" EntityType="ddc_login2Model.tbdoc" />
+          <FunctionImport Name="search_pract" EntitySet="tbdocs" ReturnType="Collection(ddc_login2Model.tbdoc)">
+            <Parameter Name="docfnm" Mode="In" Type="String" />
+            <Parameter Name="doclnm" Mode="In" Type="String" />
+            <Parameter Name="docregnum" Mode="In" Type="String" />
+            <Parameter Name="docrescty" Mode="In" Type="String" />
+            <Parameter Name="docprocty" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Rolemaster">
           <Key>
@@ -308,6 +322,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="search_pract" FunctionName="ddc_login2Model.Store.search_pract" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

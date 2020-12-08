@@ -58,7 +58,7 @@
                                 <div class="form-group">
                                     <label class="">Residential City</label>
                                     <div class="">
-                                        @Html.DropDownList("Residential", TempData["Residential"] as IEnumerable<SelectListItem>, "Select", htmlAttributes: new { @class = "form-control" })
+                                        @Html.DropDownList("Residential", ViewBag.Residential as IEnumerable<SelectListItem>, "Select", htmlAttributes: new { @class = "form-control" })
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@
 
 
                                         @*@Html.DropDownList("ProfessionalCity", ViewBag.ProfessionalCity as IEnumerable<SelectListItem>, "Select", htmlAttributes: new { @class = "form-control" })*@
-                                        @Html.DropDownList("ProfessionalCity", TempData["ProfessionalCity"] as IEnumerable<SelectListItem>, "Select", htmlAttributes: new { @class = "form-control" })
+                                        @Html.DropDownList("ProfessionalCity", ViewBag.ProfessionalCity as IEnumerable<SelectListItem>, "Select", htmlAttributes: new { @class = "form-control" })
                                     </div>
                                 </div>
                             </div>
@@ -80,9 +80,6 @@
                                     <input type="submit" class="form-control btn btn-success mt-2" value="Search">
                                 </div>
 
-                            </div>
-                            <div class="col-md-2" style="float:right;margin-top:31px">
-                                <input type="submit" formaction="/main/Getexcelreport" class="form-control btn btn-success mt-2" value="Export To Excel">
                             </div>
 
                             @*<div class="col-md-6">
@@ -133,24 +130,13 @@
                                                 <td>@data.docmob</td>
                                                 <td>@data.doceml</td>
                                                 <td>@data.docrescty</td>
-
-                                               
                                                 @*<td>@data.docprocty</td>*@
-                                                <td>@Html.ActionLink("Add Payment", "index", new {id=data.doccod })</td>
-                                                <td>@Html.ActionLink("Renewal", "index",new { id = data.doccod })</td>
-                                                <td>@Html.ActionLink("View Docs", "index", new { id = data.doccod })</td>
-                                                <td>@Html.ActionLink("Edit", "index", new { id = data.doccod })</td>
-                                                <td>@Html.ActionLink("Delete", "index", new { id = data.doccod })</td>
-
-
-
-
-                                                @*<td><a href="@Url.Action("index", "main",data.doccod)">Add Payment</a></td>
-        <td><a href="@Url.Action("index", "main",data.doccod)">Add Remarks</a></td>
-        <td><a href="@Url.Action("index", "main",data.doccod)">Renewal</a></td>
-        <td><a href="@Url.Action("index", "main",data.doccod)">View Docs</a></td>
-        <td><a href="@Url.Action("index", "main",data.doccod)">Edit</a></td>
-        <td><a href="@Url.Action("index", "main",data.doccod)">Delete</a></td>*@
+                                                <td><a href="@Url.Action("tt", "main",data.doccod)">Add Payment</a></td>
+                                                <td><a href="@Url.Action("tt", "main",data.doccod)">Add Remarks</a></td>
+                                                <td><a href="@Url.Action("tt", "main",data.doccod)">Renewal</a></td>
+                                                <td><a href="@Url.Action("tt", "main",data.doccod)">View Docs</a></td>
+                                                <td><a href="@Url.Action("tt", "main",data.doccod)">Edit</a></td>
+                                                <td><a href="@Url.Action("tt", "main",data.doccod)">Delete</a></td>
                                             </tr>
                                                
                                             }

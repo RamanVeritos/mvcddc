@@ -34,52 +34,52 @@ namespace WebApplication1.Models
     
         public virtual ObjectResult<tbdoc> search_pract(string docfnm, string doclnm, string docregnum, string docrescty, string docprocty)
         {
-            var docfnmParameter = docfnm != null ?
+            var docfnmParameter = docfnm != string.Empty?
                 new ObjectParameter("docfnm", docfnm) :
                 new ObjectParameter("docfnm", typeof(string));
     
-            var doclnmParameter = doclnm != null ?
+            var doclnmParameter = doclnm != string.Empty ?
                 new ObjectParameter("doclnm", doclnm) :
                 new ObjectParameter("doclnm", typeof(string));
     
-            var docregnumParameter = docregnum != null ?
+            var docregnumParameter = docregnum != string.Empty ?
                 new ObjectParameter("docregnum", docregnum) :
                 new ObjectParameter("docregnum", typeof(string));
     
-            var docresctyParameter = docrescty != null ?
+            var docresctyParameter = docrescty != string.Empty ?
                 new ObjectParameter("docrescty", docrescty) :
                 new ObjectParameter("docrescty", typeof(string));
     
-            var docproctyParameter = docprocty != null ?
+            var docproctyParameter = docprocty != string.Empty ?
                 new ObjectParameter("docprocty", docprocty) :
                 new ObjectParameter("docprocty", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<tbdoc>("search_pract", docfnmParameter, doclnmParameter, docregnumParameter, docresctyParameter, docproctyParameter);
         }
     
-        public virtual ObjectResult<tbdoc> search_pract(string docfnm, string doclnm, string docregnum, string docrescty, string docprocty, MergeOption mergeOption)
-        {
-            var docfnmParameter = docfnm != null ?
-                new ObjectParameter("docfnm", docfnm) :
-                new ObjectParameter("docfnm", typeof(string));
+        //public virtual ObjectResult<tbdoc> search_pract(string docfnm, string doclnm, string docregnum, string docrescty, string docprocty, MergeOption mergeOption)
+        //{
+        //    var docfnmParameter = docfnm != null ?
+        //        new ObjectParameter("docfnm", docfnm) :
+        //        new ObjectParameter("docfnm", typeof(string));
     
-            var doclnmParameter = doclnm != null ?
-                new ObjectParameter("doclnm", doclnm) :
-                new ObjectParameter("doclnm", typeof(string));
+        //    var doclnmParameter = doclnm != null ?
+        //        new ObjectParameter("doclnm", doclnm) :
+        //        new ObjectParameter("doclnm", typeof(string));
     
-            var docregnumParameter = docregnum != null ?
-                new ObjectParameter("docregnum", docregnum) :
-                new ObjectParameter("docregnum", typeof(string));
+        //    var docregnumParameter = docregnum != null ?
+        //        new ObjectParameter("docregnum", docregnum) :
+        //        new ObjectParameter("docregnum", typeof(string));
     
-            var docresctyParameter = docrescty != null ?
-                new ObjectParameter("docrescty", docrescty) :
-                new ObjectParameter("docrescty", typeof(string));
+        //    var docresctyParameter = docrescty != null ?
+        //        new ObjectParameter("docrescty", docrescty) :
+        //        new ObjectParameter("docrescty", typeof(string));
     
-            var docproctyParameter = docprocty != null ?
-                new ObjectParameter("docprocty", docprocty) :
-                new ObjectParameter("docprocty", typeof(string));
+        //    var docproctyParameter = docprocty != null ?
+        //        new ObjectParameter("docprocty", docprocty) :
+        //        new ObjectParameter("docprocty", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<tbdoc>("search_pract", mergeOption, docfnmParameter, doclnmParameter, docregnumParameter, docresctyParameter, docproctyParameter);
-        }
+        //    return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<tbdoc>("search_pract", mergeOption, docfnmParameter, doclnmParameter, docregnumParameter, docresctyParameter, docproctyParameter);
+        //}
     }
 }

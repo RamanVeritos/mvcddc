@@ -65,7 +65,7 @@ namespace WebApplication1.Controllers
             {
 
   
-                TempData["ProfessionalCity"] = Context.tbdocs.Where(z => z.docprocty != null).Select(i => new SelectListItem() { Text = i.docprocty, Value = i.docprocty.ToString() }).Distinct().ToList();
+                TempData["ProfessionalCity"] = Context.tbdocs.Where(z => z.docprocty != null).Select(i => new SelectListItem() { Text = i.docprocty, Value = i.docprocty.ToString()}).Distinct().ToList();
                 TempData["Residential"] = Context.tbdocs.Where(z => z.docrescty != null).Select(i => new SelectListItem() { Text = i.docrescty, Value = i.docrescty.ToString() }).Distinct().ToList();
                 //ViewBag.ProfessionalCity = TempData["ProfessionalCity"];
                 //ViewBag.Residential = TempData["Residential"];
